@@ -2,13 +2,16 @@ import Image from 'next/image';
 
 const phoneDisplay = '055-459-8884';
 const phoneHref = '+972554598884';
+const whatsappDisplay = '053-480-8852';
+const whatsappHref = 'https://wa.me/972534808852';
 const assutaBookingHref = 'https://doctors.assuta.co.il/doctor/arik-segal-35031';
 
 const insuranceArrangements = [
-  { name: 'מכבי', className: 'maccabi' },
-  { name: 'מאוחדת', className: 'meuhedet' },
-  { name: 'לאומית משלים', className: 'leumit' },
-  { name: 'כלל ביטוח', className: 'clal' },
+  { name: 'ביטוח הפניקס', className: 'phoenix' },
+  { name: 'פמי נ. שירותים בע״מ', className: 'femi' },
+  { name: 'כלל חברה לביטוח בע״מ', className: 'clal' },
+  { name: 'ביטוח איילון', className: 'ayalon' },
+  { name: 'מטופל פרטי', className: 'private' },
 ];
 
 const specialties = [
@@ -29,7 +32,6 @@ const specialties = [
     text: 'ידע וניסיון קליני ומחקרי בתחומי המיקרוביום, רפואת מערכת העיכול והשתלות צואה.',
   },
 ];
-
 
 const researchItems = [
   {
@@ -53,10 +55,10 @@ const researchItems = [
 ];
 
 const credentials = [
-  'מומחה בגסטרואנטרולוגיה',
+  'סגן מנהל מכון גסטרו — המרכז הרפואי האוניברסיטאי סורוקה',
+  'מומחה בגסטרואנטרולוגיה ומחלות כבד',
   'מומחה ברפואה פנימית',
-  'סגן מנהל מכון גסטרו בסורוקה',
-  'חבר סגל קליני באוניברסיטת בן־גוריון',
+  'מדריך בפקולטה לרפואה — אוניברסיטת בן־גוריון',
 ];
 
 export default function Home() {
@@ -72,7 +74,7 @@ export default function Home() {
           <a href="#about">אודות</a>
           <a href="#specialties">תחומי טיפול</a>
           <a href="#research">מחקר</a>
-          <a href="#insurance">הסדרים</a>
+          <a href="#insurance">החזרים והסדרים</a>
           <a href="#reviews">חוות דעת</a>
           <a href="#clinic">הקליניקה</a>
         </nav>
@@ -92,7 +94,7 @@ export default function Home() {
           </p>
           <div className="actions">
             <a className="primary" href={assutaBookingHref} target="_blank" rel="noreferrer">זימון תור דרך אסותא</a>
-            <a className="secondary" href={`tel:${phoneHref}`}>שאלות כלליות {phoneDisplay}</a>
+            <a className="secondary" href={whatsappHref} target="_blank" rel="noreferrer">WhatsApp למרפאה {whatsappDisplay}</a>
           </div>
           <div className="heroMeta">
             <div><span>קליניקה פרטית</span><strong>יצחק בן צבי 9, באר שבע</strong></div>
@@ -162,24 +164,28 @@ export default function Home() {
               sizes="(max-width: 900px) 70vw, 32vw"
             />
           </div>
-          <blockquote>״מקצועיות רפואית צריכה להגיע יחד עם הסבר ברור ותחושת ביטחון למטופל.״</blockquote>
+          <div className="portraitCaption">ייעוץ מקצועי, יסודי ומבוסס ניסיון קליני ומחקרי.</div>
         </div>
 
         <div className="aboutCopy">
           <span className="eyebrow">אודות ד״ר סגל</span>
           <h2>ניסיון רפואי בכיר. יחס אישי.</h2>
           <p className="aboutLead">
-            ד״ר אריק סגל הוא מומחה בגסטרואנטרולוגיה וברפואה פנימית, סגן מנהל מכון הגסטרואנטרולוגיה בסורוקה וחבר סגל קליני באוניברסיטת בן־גוריון.
+            ד״ר אריק סגל סיים את לימודי הרפואה בטכניון בשנת 2002. התמחה ברפואה פנימית במרכז הרפואי רמב״ם ובהמשך בגסטרואנטרולוגיה ומחלות כבד במרכז הרפואי סורוקה, שם הוא משמש כיום כסגן מנהל מכון הגסטרו.
           </p>
+          <div className="roleCallout">
+            <span>תפקיד ציבורי</span>
+            <strong>סגן מנהל מכון גסטרו, המרכז הרפואי האוניברסיטאי סורוקה</strong>
+          </div>
           <div className="factsGrid">
-            <div><span>01</span><p>התמחות בגסטרואנטרולוגיה ומחלות כבד במרכז הרפואי סורוקה.</p></div>
-            <div><span>02</span><p>ניסיון קליני בטיפול במחלות מעי דלקתיות ובמצבים מורכבים של מערכת העיכול.</p></div>
-            <div><span>03</span><p>פעילות מחקרית בתחומי הגסטרו, המיקרוביום והשתלות צואה.</p></div>
-            <div><span>04</span><p>ייעוץ פרטי המשלב מעבר יסודי על ההיסטוריה הרפואית, הבדיקות ואפשרויות הטיפול.</p></div>
+            <div><span>01</span><p>תחום העיסוק המרכזי: מחלות מעי דלקתיות — קרוהן וקוליטיס.</p></div>
+            <div><span>02</span><p>אחראי על בנק הצואה בסורוקה ועוסק בתחום השתלות צואה.</p></div>
+            <div><span>03</span><p>חוקר את השפעת המיקרוביום על מחלות שונות בשיתופי פעולה עם הטכניון, מכון ויצמן ואוניברסיטת בן־גוריון.</p></div>
+            <div><span>04</span><p>חוקר ראשי (PI) במחקרי תעשייה רבים במכון הגסטרו בסורוקה.</p></div>
+            <div><span>05</span><p>מדריך בפקולטה לרפואה של אוניברסיטת בן־גוריון.</p></div>
           </div>
         </div>
       </section>
-
 
       <section className="research section" id="research">
         <div className="sectionHead splitHead researchHead">
@@ -210,19 +216,23 @@ export default function Home() {
       <section className="insurance section" id="insurance">
         <div className="sectionHead splitHead insuranceHead">
           <div>
-            <span className="eyebrow">הסדרים והחזרים</span>
-            <h2>אפשרויות מימון דרך קופות וביטוחים.</h2>
+            <span className="eyebrow">הסדרים</span>
+            <h2>הסדרי הקבלה דרך אסותא.</h2>
           </div>
-          <p>הזכאות לשירות, השתתפות עצמית או החזר נקבעת לפי תנאי הקופה או פוליסת הביטוח האישית. מומלץ לבדוק זכאות לפני קביעת התור.</p>
+          <p>ההסדרים המוצגים כאן תואמים לרשימת ההסדרים בפרופיל ד״ר אריק סגל באסותא.</p>
         </div>
-        <div className="insuranceLogos" aria-label="הסדרים וקופות">
+        <div className="insuranceLogos" aria-label="הסדרים באסותא">
           {insuranceArrangements.map((item) => (
             <div className={`insuranceLogo ${item.className}`} key={item.name}>
               <span>{item.name}</span>
             </div>
           ))}
         </div>
-        <p className="insuranceNote">המידע מוצג לנוחות המטופלים ואינו מהווה התחייבות לכיסוי. ההסדר בפועל כפוף לזכאות ולתנאי הפוליסה/הקופה.</p>
+        <div className="clalitCallout">
+          <span>בנוסף</span>
+          <strong>ד״ר סגל מקבל גם במסגרת כללית מושלם.</strong>
+        </div>
+        <p className="insuranceNote">קבלת שירותי הרופא במסגרת כל אחד מההסדרים כפופה לתנאי הזכאות על פי פוליסת הביטוח או המסלול הרלוונטי.</p>
       </section>
 
       <section className="reviewSection" id="reviews">
@@ -242,16 +252,17 @@ export default function Home() {
           <span className="eyebrow">הקליניקה הפרטית</span>
           <h2>ייעוץ פרטי בבאר שבע.</h2>
           <p>
-            זימון תורים לד״ר אריק סגל מתבצע דרך מערכת זימון התורים של אסותא בלבד. הטלפון משמש לשאלות כלליות של המרפאה.
+            זימון תורים לד״ר אריק סגל מתבצע דרך מערכת זימון התורים של אסותא בלבד. לשאלות כלליות ניתן לפנות למרפאה בטלפון או ב־WhatsApp.
           </p>
           <div className="actions">
             <a className="primary" href={assutaBookingHref} target="_blank" rel="noreferrer">זימון תור באתר אסותא</a>
-            <a className="secondary" href={`tel:${phoneHref}`}>שאלות כלליות למרפאה</a>
+            <a className="secondary" href={whatsappHref} target="_blank" rel="noreferrer">WhatsApp למרפאה</a>
           </div>
         </div>
         <div className="clinicPanel">
           <div className="clinicFact"><span>כתובת</span><strong>יצחק בן צבי 9<br />באר שבע</strong></div>
           <div className="clinicFact"><span>טלפון</span><a href={`tel:${phoneHref}`}>{phoneDisplay}</a></div>
+          <div className="clinicFact"><span>WhatsApp</span><a href={whatsappHref} target="_blank" rel="noreferrer">{whatsappDisplay}</a></div>
           <div className="clinicFact"><span>זימון תורים</span><strong>דרך אסותא בלבד</strong></div>
           <a className="mapLink" href="https://www.google.com/maps/search/?api=1&query=%D7%99%D7%A6%D7%97%D7%A7+%D7%91%D7%9F+%D7%A6%D7%91%D7%99+9+%D7%91%D7%90%D7%A8+%D7%A9%D7%91%D7%A2" target="_blank" rel="noreferrer">פתיחה ב־Google Maps ↗</a>
         </div>
@@ -270,7 +281,7 @@ export default function Home() {
 
       <footer>
         <div><strong>ד״ר אריק סגל</strong><span>מומחה בגסטרואנטרולוגיה וברפואה פנימית</span></div>
-        <div className="footerRight"><span>יצחק בן צבי 9, באר שבע</span><span>{phoneDisplay}</span><small>Clinic website • v004</small></div>
+        <div className="footerRight"><span>יצחק בן צבי 9, באר שבע</span><span>WhatsApp: {whatsappDisplay}</span><span>טלפון: {phoneDisplay}</span><small>Clinic website • v008</small></div>
       </footer>
     </main>
   );
