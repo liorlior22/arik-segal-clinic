@@ -21,12 +21,12 @@ function FloatingContact() {
           <path d="M7.2 3.8 5.6 5.4c-.9.9-.7 3 .4 5.2 1.7 3.3 4.4 6 7.7 7.7 2.2 1.1 4.3 1.3 5.2.4l1.6-1.6c.4-.4.4-1 0-1.4l-3-2.3c-.4-.3-.9-.3-1.3.1l-1.2 1.2c-1.8-.9-3.4-2.5-4.3-4.3l1.2-1.2c.4-.4.4-.9.1-1.3l-2.3-3c-.4-.5-1.1-.5-1.5-.1Z" />
         </svg>
       </a>
-      <span className="floatingDisabled" aria-label="מייל - יעודכן בקרוב" title="מייל">
+      <a href="mailto:liorengel22@gmail.com" aria-label="שליחת מייל" title="מייל">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <rect x="3" y="5" width="18" height="14" rx="2" />
           <path d="m4 7 8 6 8-6" />
         </svg>
-      </span>
+      </a>
     </div>
   );
 }
