@@ -76,6 +76,7 @@ export default function Home() {
           <a href="#insurance">הסדרים</a>
           <a href="#reviews">חוות דעת</a>
           <a href="#clinic">הקליניקה</a>
+          <a href="#contact-form">צור קשר</a>
         </nav>
 
         <a className="smallCta" href={assutaBookingHref} target="_blank" rel="noreferrer">
@@ -222,6 +223,39 @@ export default function Home() {
           <div className="clinicFact"><span>WhatsApp</span><a href={whatsappHref} target="_blank" rel="noreferrer">{whatsappDisplay}</a></div>
           <div className="clinicFact"><span>זימון תורים</span><strong>אסותא</strong></div>
           <a className="mapLink" href="https://www.google.com/maps/search/?api=1&query=%D7%99%D7%A6%D7%97%D7%A7+%D7%91%D7%9F+%D7%A6%D7%91%D7%99+9+%D7%91%D7%90%D7%A8+%D7%A9%D7%91%D7%A2" target="_blank" rel="noreferrer">פתיחה ב־Google Maps ↗</a>
+        </div>
+      </section>
+
+      <section className="section contactFormSection" id="contact-form">
+        <div className="contactFormWrap">
+          <div className="contactFormIntro">
+            <span className="eyebrow">צור קשר</span>
+            <h2>רוצים לפנות למרפאה?</h2>
+            <p>השאירו פרטים והפנייה תישלח ישירות למייל של המרפאה.</p>
+          </div>
+
+          <form className="contactForm" action="https://formsubmit.co/liorengel22@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="פנייה חדשה מאתר ד״ר אריק סגל" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div className="contactField">
+              <label htmlFor="contact-name">שם</label>
+              <input id="contact-name" type="text" name="שם" placeholder="שם מלא" required />
+            </div>
+
+            <div className="contactField">
+              <label htmlFor="contact-subject">כותרת הפנייה</label>
+              <input id="contact-subject" type="text" name="כותרת הפנייה" placeholder="במה נוכל לעזור?" required />
+            </div>
+
+            <div className="contactField">
+              <label htmlFor="contact-message">תוכן הפנייה</label>
+              <textarea id="contact-message" name="תוכן הפנייה" placeholder="כתבו כאן את פרטי הפנייה" required />
+            </div>
+
+            <button className="contactSubmit" type="submit">שליחת הפנייה</button>
+          </form>
         </div>
       </section>
 
