@@ -38,21 +38,25 @@
   .ratingLine strong { font-size: 24px; }
 
   .credentialsStrip {
-    grid-template-columns: 1fr;
-    padding: 8px 18px 14px;
-    gap: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    gap: 14px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
   }
   .credentialsStrip span {
+    width: 100%;
     min-height: auto;
-    padding: 16px 12px;
-    border-left: 0;
-    border-bottom: 1px solid var(--line) !important;
+    padding: 16px 14px;
+    border: 0 !important;
+    border-radius: 14px;
+    background: rgba(255,255,255,.55);
     font-size: 15px;
     line-height: 1.55;
     text-align: center;
     white-space: normal;
   }
-  .credentialsStrip span:last-child { border-bottom: 0 !important; }
 
   .section { padding: 72px 18px; }
   .eyebrow { font-size: 15px; margin-bottom: 12px; }
@@ -126,6 +130,6 @@
   h1 { font-size: 54px; }
   .heroImage { height: 390px; }
   .insuranceLogos { grid-template-columns: 1fr; }
-  .credentialsStrip { padding-left: 14px; padding-right: 14px; }
-  .credentialsStrip span { font-size: 14px; padding: 15px 8px; }
+  .credentialsStrip { padding: 14px; gap: 12px; }
+  .credentialsStrip span { font-size: 14px; padding: 14px 10px; }
 }
