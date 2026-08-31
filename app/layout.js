@@ -1,6 +1,7 @@
 import './globals.css';
 import './patch.css';
 import './floating-contact.css';
+import './mobile.css';
 
 export const metadata = {
   title: 'ד״ר אריק סגל | מומחה בגסטרואנטרולוגיה בבאר שבע',
