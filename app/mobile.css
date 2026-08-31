@@ -39,14 +39,18 @@
 
   .credentialsStrip {
     grid-template-columns: 1fr;
-    padding: 0 18px;
+    padding: 8px 18px 14px;
+    gap: 0;
   }
   .credentialsStrip span {
-    min-height: 56px;
-    padding: 14px 6px;
+    min-height: auto;
+    padding: 16px 12px;
     border-left: 0;
     border-bottom: 1px solid var(--line) !important;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.55;
+    text-align: center;
+    white-space: normal;
   }
   .credentialsStrip span:last-child { border-bottom: 0 !important; }
 
@@ -122,4 +126,6 @@
   h1 { font-size: 54px; }
   .heroImage { height: 390px; }
   .insuranceLogos { grid-template-columns: 1fr; }
+  .credentialsStrip { padding-left: 14px; padding-right: 14px; }
+  .credentialsStrip span { font-size: 14px; padding: 15px 8px; }
 }
