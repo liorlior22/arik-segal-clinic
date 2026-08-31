@@ -1,4 +1,5 @@
 import './globals.css';
+import './patch.css';
 
 export const metadata = {
   title: 'ד״ר אריק סגל | מומחה בגסטרואנטרולוגיה בבאר שבע',
